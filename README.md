@@ -52,7 +52,7 @@ Kebutuhan pengguna yang kami terapkan pada webiste wira bordir computer adalah s
 # Installing
 Clone Repository Github Project diset ke public
 ```bash
-git clone https://github.com/RahmainiHarna/Wira-Bordir
+git clone https://github.com/RahmainiHarna/Wira-Bordir.git
 ```
 Masuk ke folder project
 ```bash
