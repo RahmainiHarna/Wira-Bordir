@@ -1,61 +1,101 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# SISTEM PEMESANAN ONLINE WIRA BORDIR COMPUTER
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Kelompok 6:
+1.	**Ilma Mahmudah** - 241402003 - *Backend*
+2.	**Rasyiqah Amalina Putri** - 241402024 - *Backend*
+3.	**Nabila Putri Indriyatno** - 241402102 - *Backend*
+4.	**Nazwa Sahara Harahap** - 2414020126 - *Frontend*
+5.	**Rahmaini Harna** - 2414020132 - *Frontend*
 
-## About Laravel
+# Description:
+WIRA BORDIR COMPUTER, yang berlokasi di Tembung, kec. Percut sei Tuan, Kabupaten Deli Serdang, Sumatera Utara, Wira Bordir Computer, sebagai penyedia layanan bordir, menghadapi tantangan dalam mengelola pesanan pelanggan secara manual yang sering menimbulkan kesalahan pencatatan, keterlambatan proses, dan kesulitan dalam memantau status pesanan. Penelitian ini bertujuan mengembangkan sistem pemesanan online berbasis web untuk meningkatkan efisiensi dan efektivitas pengelolaan pesanan di Wira Bordir Computer.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Kebutuhan pengguna yang kami terapkan pada webiste wira bordir computer adalah sebagai berikut.
+1.	**Admin**
+- Admin dapat login ke dalam dashboard admin.
+- Admin dapat mengelola data pesanan pelanggan seperti menambah, mengedit, dan menghapus.
+- Admin dapat memantau status pesanan pelanggan.
+- Admin dapat memberikan konfirmasi pembayaran pelanggan yang telah mengunggah bukti pembayaran.
+- Admin dapat mengelola kategori layanan bordir serta mengubah harga sesuai kebijakan.
+- Admin dapat melihat informasi pelanggan serta menonaktifkan akun
+- bila diperlukan.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+2.	**Owner**
+- Pemilik dapat login ke dalam tampilan dashboard owner.
+- Pemilik dapat melihat jumlah pesanan yang masuk, pesanan yang selesai, dan pelanggan aktif.
+- Pemilik dapat melihat dan mengedit status aktif atau tidak aktif pengguna dan pegawai.
+- Pemilik dapat melihat detail, menambahkan, dan mengedit data layanan bordir yang tersedia.
+- Pemilik dapat melihat grafik penjualan selama sebulan terakhir.
+- Pemilik dapat melihat dan mencetak laporan terkait pemasukan dan pengeluaran.
+- Pemilik dapat memantau produk/jasa bordir terlaris berdasarkan data penjualan.
+- Pemilik dapat memfilter dan melihat riwayat transaksi pelanggan berdasarkan tanggal dan status pembayaran.
+- Pemilik dapat mengakses log aktivitas admin untuk memantau perubahan yang dilakukan di sistem.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+3.	**User**
+- User dapat  registrasi dan login ke dalam tampilan dashboard pengguna dengan menggunakan email yang valid.
+- User dapat menggunakan fitur “Ingat Saya” untuk tetap login tanpa harus login ulang.
+- User dapat menggunakan fitur lupa password untuk mengatur ulang password melalui verifikasi email.
+- User dapat mengedit profil biodatanya, mengganti password dan menghapus akun.
+- User dapat melihat daftar layanan bordir yang ditawarkan beserta deskripsi, harga, dan estimasi waktu pengerjaan.
+- User dapat memilih layanan bordir dan melakukan pemesanan secara online.
+- User dapat mengunggah desain, logo atau pola bordir untuk pesanan.
+- User dapat melihat status pemesanan yang telah dilakukan.
+- User dapat melihat riwayat transaksi pemesanan sebelumnya.
+- User dapat melakukan pembatalan pesanan selama pesanan belum diproses.
+# Tech Stack
+1.	**Composer version 2.8.4** (Mengelola library dan dependency Laravel.)
+2.	**Laravel v12.14.1** (Framework utama untuk membangun web dengan struktur MVC.)
+3.	**PHP 8.3.16** (Bahasa pemrograman backend untuk menjalankan logika sistem.)
+4.	**MYSQL  8.4.3** (Database untuk menyimpan dan mengelola data project.)
+5.	**Laragon v8.2.3** (Server lokal untuk menjalankan Laravel dan database dengan mudah.)
+6.	**HTML, CSS, dan JavaScript** (Membentuk tampilan dan interaksi pada halaman web (frontend) ).
+# Installing
+Clone Repository Github Project diset ke public
+```bash
+git clone https://github.com/RahmainiHarna/Wira-Bordir.git
+```
+Masuk ke folder project
+```bash
+cd Wira-Bordir
+```
+Install semua dependency Laravel
+```bash
+composer install
+```
+Salin file .env.example menjadi .env
+```bash
+copy .env.example .env
+```
+Generate application key
+```bash
+php artisan key:generate
+```
+Atur koneksi database di file .env
+```bash
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=Wira-Bordir
+DB_USERNAME=root
+DB_PASSWORD=
+```
+Jalankan migrasi database (opsional)
+```bash
+php artisan migrate
+```
+Jalankan server Laravel
+```bash
+Php artisan serve
+```
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-### Premium Partners
+  
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
 
-## Contributing
+ 
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
