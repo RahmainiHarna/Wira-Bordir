@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -18,9 +17,13 @@ class User extends Authenticatable
      * @var list<string>
      */
     protected $fillable = [
-        'name',
+        'username',
         'email',
+        'phone_number',
+        'address',
         'password',
+        'role',
+        'is_active',
     ];
 
     /**
@@ -44,5 +47,45 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function isAdmin(): bool
+    {
+        return $this->role === 'admin';
+    }
+
+    public function isOwner(): bool
+    {
+        return $this->role === 'owner';
+    }
+
+    public function isCustomer(): bool
+    {
+        return $this->role === 'customer';
+    }
+    public function getRoleBadgeColorAttribute(): string
+    {
+        return match ($this->role) {
+            'admin' => 'danger',
+            'owner' => 'primary',
+            'customer' => 'success',
+            default => 'secondary',
+        };
+    }
+
+    /**
+     * Get status badge color
+     */
+    public function getStatusBadgeColorAttribute(): string
+    {
+        return $this->is_active ? 'success' : 'danger';
+    }
+
+    /**
+     * Relationship with orders
+     */
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
     }
 }
