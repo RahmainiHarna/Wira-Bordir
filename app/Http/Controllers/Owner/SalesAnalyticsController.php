@@ -216,7 +216,7 @@ class SalesAnalyticsController extends Controller
         $data = $query->get();
 
         // Menggunakan status: done, confirm, paid dan amount_paid
-        $relevantOrders = $data->whereIn('order_status', ['done', 'confirm', 'paid']);
+      $relevantOrders = $data->whereIn('order_status', ['done', 'confirm', 'paid', 'processing']);
         
         return [
             'revenue' => $relevantOrders->sum('amount_paid'),
@@ -266,7 +266,7 @@ class SalesAnalyticsController extends Controller
         $data = $query->get();
 
         // Menggunakan status: done, confirm, paid dan amount_paid
-        $relevantOrders = $data->whereIn('order_status', ['done', 'confirm', 'paid']);
+       $relevantOrders = $data->whereIn('order_status', ['done', 'confirm', 'paid', 'processing']);
 
         return [
             'revenue' => $relevantOrders->sum('amount_paid'),

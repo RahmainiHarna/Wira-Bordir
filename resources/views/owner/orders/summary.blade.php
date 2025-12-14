@@ -18,7 +18,7 @@
                 <i class="fas fa-inbox fa-2x text-warning mb-2"></i>
                 <h6 class="text-muted mb-1">Pesanan Masuk</h6>
                 <h3 class="mb-0 fw-bold text-warning">{{ number_format($stats['incoming_orders']) }}</h3>
-                <small class="text-muted">Pending, Paid, Confirm</small>
+                 <small class="text-muted">Pending, Paid, Confirm, Processing</small>
             </div>
         </div>
     </div>
@@ -64,7 +64,7 @@
             <div class="card-body">
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
-                        <small class="text-muted d-block">Total Pendapatan (Selesai)</small>
+                        <small class="text-muted d-block">Total Pendapatan</small>
                         <h3 class="mb-0 text-success fw-bold">Rp {{ number_format($stats['total_revenue'], 0, ',', '.') }}</h3>
                     </div>
                     <div class="revenue-icon bg-success text-white">
