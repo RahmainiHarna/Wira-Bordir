@@ -3,7 +3,7 @@
         <div class="row align-items-center">
             <div class="col-md-6">
                 <p class="mb-0 text-muted">
-                    &copy; {{ date('Y') }} Custom Sash Store. Semua hak dilindungi.
+                    &copy; {{ date('Y') }} Wira Bordir Computer. Semua hak dilindungi.
                 </p>
             </div>
             <div class="col-md-6 text-md-end">

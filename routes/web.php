@@ -26,7 +26,7 @@ use App\Http\Controllers\Owner\PurchaseInvoiceController;
 use App\Http\Controllers\Owner\SalesAnalyticsController;
 use App\Http\Controllers\Owner\TransactionHistoryController;
 use App\Http\Controllers\Owner\UserManagementController;
-use App\Http\Controllers\GalleryPageController;
+use App\Http\Controllers\Customer\GalleryPageController;
 use App\Http\Controllers\Customer\OrderProcessController;
 
 // Guest Routes (Auth)
@@ -155,8 +155,8 @@ Route::middleware(['auth', 'role:customer'])->group(function () {
     Route::get('/order/{order}/step2', [OrderProcessController::class, 'step2'])
         ->name('order.step2');
 
-    Route::post('/order/{order}/step2/save', [OrderProcessController::class, 'saveItems'])
-        ->name('order.saveItems');
+    Route::post('/order/{order}/step2/save', [OrderProcessController::class, 'saveStep2'])
+        ->name('order.saveStep2');
 
     Route::get('/order/{order}/step3', [OrderProcessController::class, 'step3'])
         ->name('order.step3');
@@ -171,8 +171,9 @@ Route::middleware(['auth', 'role:customer'])->group(function () {
 
     // Detail Pesanan
     Route::get('/orders/{order}', [OrderProcessController::class, 'detail'])
-    ->name('order.detail');
+        ->name('order.detail');
 
+    // Upload Bukti Pembayaran
     Route::post('/orders/{order}/upload-payment', [OrderProcessController::class, 'uploadPayment'])
-    ->name('order.uploadPayment');
+        ->name('order.uploadPayment');
 });

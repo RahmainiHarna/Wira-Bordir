@@ -5,22 +5,22 @@
 @section('content')
 <section class="bg-linear-to-b from-white/75 via-white/90 to-sage min-h-screen py-12 px-6 md:px-12 lg:px-12">
 
-    <div class="flex justify-end mb-10">
+    <div class="flex justify-start mb-10">
         <a href="{{ route('home') }}"
-        class="bg-moss hover:bg-rose text-white font-semibold px-5 py-3 rounded-full shadow-lg transition-all flex items-center gap-2">
+        class="bg-moss hover:bg-rose text-white font-semibold px-5 py-3 rounded-full shadow-lg transition-all flex items-center gap-3 uppercase tracking-wide">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M3 12l9-9 9 9M4 10v10a1 1 0 001 1h4m10-11v10a1 1 0 01-1 1h-4" />
             </svg>
-            Kembali ke Home
+            Back to Home
         </a>
     </div>
 
     <div class="max-w-4xl mx-auto">
-        <h2 class="text-5xl font-bold font-display mb-8 text-center text-moss">Order History</h2>
+        <h2 class="text-5xl font-bold font-display mb-10 text-center text-moss">Order History</h2>
 
         @if($orders->isEmpty())
-            <p class="text-center text-gray-600">Belum ada pemesanan.</p>
+            <p class="text-center text-lg text-gray-600">Belum ada pemesanan.</p>
         @else
             <div class="overflow-x-auto rounded-2xl shadow-2xl">
                 <table class="min-w-full bg-white">

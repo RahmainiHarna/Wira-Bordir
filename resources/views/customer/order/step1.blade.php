@@ -3,7 +3,19 @@
 @section('title', 'Data Pemesan')
 
 @section('content')
-<section class="bg-linear-to-b from-white/75 via-white/90 to-sage min-h-screen py-20 px-6 md:px-12 lg:px-16">
+<section class="bg-linear-to-b from-white/75 via-white/90 to-sage min-h-screen py-12 px-6 md:px-12 lg:px-12">
+    
+    <div class="flex justify-start mb-10">
+        <a href="{{ route('home') }}"
+        class="bg-moss hover:bg-rose text-white font-semibold px-5 py-3 rounded-full shadow-lg transition-all flex items-center gap-3 uppercase tracking-wide">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 12l9-9 9 9M4 10v10a1 1 0 001 1h4m10-11v10a1 1 0 01-1 1h-4" />
+            </svg>
+            Back to Home
+        </a>
+    </div>
+
     <div class="max-w-3xl mx-auto bg-white p-6 rounded-2xl shadow-lg">
         <h2 class="text-4xl font-bold font-display text-moss mb-6 text-center">Data Diri Pemesan</h2>
 
@@ -32,8 +44,8 @@
 
             <div class="flex justify-end mt-6">
                 <button type="submit" 
-                    class="flex items-center gap-1 pl-7 pr-6 py-3 bg-leaf text-white font-bold rounded-full hover:bg-rose transition-colors shadow-md uppercase tracking-wider">
-                    Next
+                    class="flex items-center gap-1 pl-5 pr-4 py-3 bg-moss text-white font-bold rounded-full hover:bg-rose transition-colors shadow-md uppercase tracking-wide">
+                    Next to Order
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                     </svg>

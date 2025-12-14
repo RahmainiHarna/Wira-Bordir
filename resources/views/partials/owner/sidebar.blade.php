@@ -1,7 +1,7 @@
 <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
         <div class="d-flex align-items-center">
-            <img src="{{ asset('images/logo.png') }}" 
+            <img src="{{ asset('images/logo-wbc.png') }}" 
                  alt="Logo" 
                  class="sidebar-logo me-3">
             <h4 class="mb-0">
