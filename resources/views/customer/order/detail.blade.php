@@ -5,22 +5,22 @@
 @section('content')
 <section class="bg-linear-to-b from-white/75 via-white/90 to-sage min-h-screen py-12 px-6 md:px-12 lg:px-12">
 
-    <div class="flex justify-end gap-4 mb-15">
+    <div class="flex justify-between gap-4 mb-15">
         <a href="{{ route('order.history') }}"
-        class="bg-moss hover:bg-rose text-white font-semibold px-5 py-3 rounded-full shadow-lg transition-all flex items-center gap-2">
+        class="bg-moss hover:bg-rose text-white font-semibold px-5 py-3 rounded-full shadow-lg transition-all flex items-center gap-2 uppercase tracking-wide">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 25 25" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M16 11V7a4 4 0 10-8 0v4M5 11h14l-1.68 9.46A2 2 0 0115.34 22H8.66a2 2 0 01-1.98-1.54L5 11z" />
             </svg>
-            Riwayat Pemesanan
+            Order History
         </a>
         <a href="{{ route('home') }}"
-        class="bg-moss hover:bg-rose text-white font-semibold px-5 py-3 rounded-full shadow-lg transition-all flex items-center gap-2">
+        class="bg-moss hover:bg-rose text-white font-semibold px-5 py-3 rounded-full shadow-lg transition-all flex items-center gap-2 uppercase tracking-wider">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M3 12l9-9 9 9M4 10v10a1 1 0 001 1h4m10-11v10a1 1 0 01-1 1h-4" />
             </svg>
-            Home
+            Back to Home
         </a>
     </div>
 
@@ -508,8 +508,8 @@
                             required></textarea>
 
                         <button type="button"
-                                onclick="validateCancel()"
-                                class="bg-red-600 text-white px-4 py-2 rounded-lg shadow hover:bg-red-700">
+                            onclick="validateCancel(this)"
+                            class="bg-red-600 text-white px-4 py-2 rounded-lg shadow hover:bg-red-700">
                             Batalkan Pesanan
                         </button>
                     </form>
@@ -532,8 +532,9 @@
 </script>
 
 <script>
-    function validateCancel() {
-        const reason = document.querySelector('textarea[name="cancellation_reason"]').value.trim();
+    function validateCancel(button) {
+        const form = button.closest('form');
+        const reason = form.querySelector('textarea[name="cancellation_reason"]').value.trim();
 
         if (reason === "") {
             alert("Alasan pembatalan wajib diisi ya!");
@@ -541,7 +542,7 @@
         }
 
         if (confirm("Yakin ingin membatalkan pesanan ini?")) {
-            document.querySelector('form[action*="order"]').submit();
+            form.submit();
         }
     }
 </script>

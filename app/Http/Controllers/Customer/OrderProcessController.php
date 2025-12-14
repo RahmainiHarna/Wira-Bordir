@@ -77,7 +77,7 @@ class OrderProcessController extends Controller
         ]);
     }
 
-    public function saveItems(Request $request, $order_id)
+    public function saveStep2(Request $request, $order_id)
     {
         $order = Order::where('id', $order_id)
             ->where('user_id', Auth::id())
@@ -179,6 +179,7 @@ class OrderProcessController extends Controller
         return view('customer.order.history', compact('orders'));
     }
 
+    // Cancel Order
     public function cancel(Request $request, Order $order)
     {
         $validated = $request->validate([
@@ -196,10 +197,11 @@ class OrderProcessController extends Controller
             'cancellation_reason' => $validated['cancellation_reason'],
         ]);
 
-        return redirect()->route('order.history')
+        return redirect()->back()
             ->with('success', 'Pesanan berhasil dibatalkan.');
     }
 
+    // Order Detail
     public function detail(Order $order)
     {
         $items = $order->orderItems()->with([
@@ -225,6 +227,7 @@ class OrderProcessController extends Controller
         return view('customer.order.detail', compact('order', 'items', 'cancelData'));
     }
 
+    // Upload Bukti Pembayaran
     public function uploadPayment(Request $request, Order $order)
     {
         $request->validate([
@@ -238,7 +241,7 @@ class OrderProcessController extends Controller
             'status' => 'paid',
         ]);
 
-        return redirect()->route('order.detail', $order->id)
+        return redirect()->back()
             ->with('success', 'Bukti pembayaran berhasil diupload! Tunggu konfirmasi admin.');
     }
 

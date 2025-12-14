@@ -7,8 +7,8 @@
     <div class="max-w-6xl mx-auto bg-white p-6 rounded-2xl shadow-lg">
         <h2 class="text-4xl font-bold font-display text-moss mb-8 mt-2 text-center">Custom Selempang Sesuai Seleramu</h2>
 
-        {{-- NOTE: action harus menuju route saveItems --}}
-        <form id="orderForm" action="{{ route('order.saveItems', $order->id) }}" method="POST" enctype="multipart/form-data">
+        {{-- NOTE: action harus menuju route saveStep2 --}}
+        <form id="orderForm" action="{{ route('order.saveStep2', $order->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div id="itemList">
 
@@ -220,8 +220,8 @@
 
             {{-- Submit --}}
             <div class="flex justify-center mt-6">
-                <button type="submit" class="flex items-center gap-1 bg-leaf hover:bg-rose text-lg font-bold transition-colors text-white pl-7 pr-6 py-3 rounded-full uppercase tracking-wide">
-                    Konfirmasi dan Bayar
+                <button type="submit" class="flex items-center bg-moss hover:bg-rose text-lg font-bold transition-colors text-white gap-1 pl-5 pr-4 py-3 rounded-full uppercase tracking-wide">
+                    Confirm and Pay
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                     </svg>
