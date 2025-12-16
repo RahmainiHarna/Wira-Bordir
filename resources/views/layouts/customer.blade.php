@@ -30,6 +30,9 @@
         <main>
             @yield('content')
         </main>
+
+        {{-- Footer Customer --}}
+        @include('customer.footer')
     </div>
 
     <!-- Global scripts -->

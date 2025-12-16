@@ -1,8 +1,9 @@
 @extends('layouts.auth')
 
-@section('title', 'Daftar')
+@section('title', 'Register')
 
 @section('content')
+<section class="bg-linear-to-br from-white/75 to-sage min-h-screen py-6 px-6 md:px-12 lg:px-12">
 <div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-12 col-xl-10">
@@ -12,7 +13,7 @@
                     <div class="col-lg-5">
                         <div class="auth-image-section">
                             <div class="auth-image-content">
-                                <img src="{{ asset('/images/ilustrasi-login.png') }}" alt="Ilustrasi Daftar" class="img-fluid mb-4">
+                                <img src="{{ asset('/images/logo-wbc.png') }}" alt="Ilustrasi Daftar" class="img-fluid mb-4">
                                 <h2>Gabung Sekarang!</h2>
                                 <p>Buat akun Anda dan mulai pengalaman berbelanja yang menyenangkan bersama kami.</p>
                             </div>
@@ -181,6 +182,7 @@
         </div>
     </div>
 </div>
+</section>
 @endsection
 
 @push('scripts')
