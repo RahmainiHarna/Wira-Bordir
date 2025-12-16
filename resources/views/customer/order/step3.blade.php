@@ -28,7 +28,7 @@
             {{-- Catatan --}}
             <div>
                 <p class="text-sm text-text-dark mt-2">Catatan: Simpan QRIS dan lakukan pembayaran sesuai total harga pesanan Anda.</p>
-                <p class="text-sm font-bold text-red-500 text-start mt-3">*Harap melakukan pembayaran dalam kurun waktu 5-7 hari.</p>
+                <p class="text-sm font-bold text-red-500 text-start mt-3">*Harap melakukan pembayaran dalam kurun waktu 5-7 hari, jika tidak ingin pesanan Anda dibatalkan.</p>
             </div>
 
             {{-- Tombol ke Riwayat --}}

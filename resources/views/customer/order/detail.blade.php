@@ -405,7 +405,7 @@
             {{-- ================== STATUS: DONE ================== --}}
             @elseif($order->status === 'done')
                 @php
-                    $waNumber = '6281234567890';
+                    $waNumber = '6282373795900';
                     $waMessage = urlencode(
                         "Halo kak, saya ingin konfirmasi pesanan saya yang sudah selesai.\n\n" .
                         "Order ID: {$order->id}\n" .

@@ -26,7 +26,7 @@
         }
 
         .invoice-header {
-            border-bottom: 3px solid #667eea;
+            border-bottom: 3px solid #CB7372;
             padding-bottom: 20px;
             margin-bottom: 30px;
         }
@@ -39,7 +39,7 @@
         .company-name {
             font-size: 24px;
             font-weight: bold;
-            color: #667eea;
+            color: #CB7372;
             margin-bottom: 5px;
         }
 
@@ -69,9 +69,9 @@
 
         .invoice-meta-item h3 {
             font-size: 14px;
-            color: #667eea;
+            color: #CB7372;
             margin-bottom: 10px;
-            border-bottom: 2px solid #667eea;
+            border-bottom: 2px solid #CB7372;
             padding-bottom: 5px;
         }
 
@@ -91,7 +91,7 @@
         }
 
         table thead {
-            background: #667eea;
+            background: #CB7372;
             color: white;
         }
 
@@ -145,7 +145,7 @@
         }
 
         .summary-table .total-row {
-            background: #667eea;
+            background: #CB7372;
             color: white;
             font-weight: bold;
             font-size: 16px;
@@ -188,7 +188,7 @@
             text-align: center;
             margin-top: 50px;
             padding-top: 20px;
-            border-top: 2px solid #667eea;
+            border-top: 2px solid #CB7372;
             color: #666;
             font-size: 11px;
         }
@@ -196,12 +196,12 @@
         .notes {
             background: #f8f9fa;
             padding: 15px;
-            border-left: 4px solid #667eea;
+            border-left: 4px solid #CB7372;
             margin-bottom: 30px;
         }
 
         .notes h4 {
-            color: #667eea;
+            color: #CB7372;
             margin-bottom: 10px;
         }
 
@@ -234,7 +234,7 @@
         }
 
         .btn-primary {
-            background: #667eea;
+            background: #CB7372;
             color: white;
         }
 
@@ -263,8 +263,8 @@
         <!-- Invoice Header -->
         <div class="invoice-header">
             <div class="company-info">
-                <div class="company-name">SASH CUSTOM</div>
-                <div class="company-tagline">Custom Sash & Accessories</div>
+                <div class="company-name">WIRA BORDIR COMPUTER</div>
+                <div class="company-tagline">Bordir Selempang Premium</div>
             </div>
             <div class="invoice-title">INVOICE</div>
         </div>
@@ -398,7 +398,7 @@
         <!-- Footer -->
         <div class="footer">
             <p>Terima kasih atas kepercayaan Anda!</p>
-            <p><strong>SASH CUSTOM</strong> - Custom Sash & Accessories</p>
+            <p><strong>Wira Bordir Computer</strong> - Selempang Bordir Premium</p>
             <p>Dicetak pada: {{ now()->format('d M Y, H:i') }} WIB</p>
         </div>
     </div>
